@@ -18,12 +18,12 @@ jobs:
         uses: cloudtype-github-actions/deploy@v1
         with:
           token: ${{ secrets.CLOUDTYPE_TOKEN }}
-          project: hochanb/lionblog_django
+          project: hochanb/lionblog-django
           stage: main
           yaml: >
-            name: snulion-week12
+            name: lionblog-django
 
-            app: python@3.9
+            app: python@3.11
 
             options:
               env: 
