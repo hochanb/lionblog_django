@@ -16,7 +16,7 @@ environ.Env.read_env(env_file=os.path.join(BASE_DIR, '.env'))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
-
+SESSION_COOKIE_DOMAIN = '.cloudtype.app'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'port-0-lionblog-django-dihik2mlizm76jm.sel4.cloudtype.app']
@@ -55,8 +55,16 @@ CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:3000', 
     'http://localhost:3000',
     'https://port-0-lionblog-django-dihik2mlizm76jm.sel4.cloudtype.app',
+    'https://web-lionblog-react-dihik2mlizm76jm.sel4.cloudtype.app',
 ]
 CORS_ALLOW_CREDENTIALS = True # cookie를 주고받으려면 얘를 True로 설정해야 해요.
+
+CORS_ALLOWED_ORIGINS= [
+    'http://127.0.0.1:3000',    
+    'http://localhost:3000',
+    'https://web-lionblog-react-dihik2mlizm76jm.sel4.cloudtype.app',
+]
+
 CORS_ALLOW_HEADERS = (
     "accept",
     "authorization",
